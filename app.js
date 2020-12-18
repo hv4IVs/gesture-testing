@@ -155,9 +155,19 @@ class App {
       }
     });
 
-    this.gestures.addEventListener("swipe", (ev) => {
-      console.log(ev);
-      self.ui.updateElement("info", `swipe ${ev.direction}`);
+    // this.gestures.addEventListener("swipe", (ev) => {
+    //   console.log(ev);
+    //   self.ui.updateElement("info", `swipe ${ev.direction}`);
+
+    //   if (self.knight.object.visible) {
+    //     self.knight.object.visible = false;
+    //     self.scene.remove(self.knight.object);
+    //   }
+    // });
+
+    this.gestures.addEventListener("doubletap", (ev) => {
+      //console.log( 'doubletap');
+      self.ui.updateElement("info", "doubletap");
 
       if (self.knight.object.visible) {
         self.knight.object.visible = false;
