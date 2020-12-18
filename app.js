@@ -148,7 +148,6 @@ class App {
     this.gestures.addEventListener("tap", (ev) => {
       console.log("tap");
       self.ui.updateElement("info", "tap");
-
       if (!self.knight.object.visible) {
         self.knight.object.visible = true;
         self.knight.object.position.set(0, -0.3, -0.5).add(ev.position);
